@@ -9,6 +9,8 @@ docker service create --name registry --publish published=5000,target=5000 regis
 
 cd web
 
+docker compose -f compose-php.yml up -d
+
 docker compose up -d
 
 docker compose ps

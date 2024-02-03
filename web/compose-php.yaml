@@ -1,0 +1,8 @@
+version: '3'
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: DockerfilePhp
+    ports:
+      - "80:80"

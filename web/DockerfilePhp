@@ -1,0 +1,19 @@
+# Use a imagem PHP com Nginx embutido
+FROM php:7.4-fpm
+
+# Instale as dependências necessárias
+RUN apt-get update && apt-get install -y \
+    nginx \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copie o arquivo PHP para o diretório do servidor web
+COPY index.php /var/www/html/index.php
+
+# Configure o Nginx para servir o PHP
+COPY nginx.conf /etc/nginx/sites-available/default
+
+# Exponha a porta 80
+EXPOSE 80
+
+# Comando para iniciar os serviços
+CMD ["nginx", "-g", "daemon off;"]
