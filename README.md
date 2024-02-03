@@ -14,4 +14,12 @@ docker compose push
 
 docker stack deploy --compose-file compose.yaml testeapp
 
+docker service ls
+
+docker service ps testeapp_web
+
+docker service scale testeapp_web=1
+docker service scale testeapp_web=5
+
+docker service rm testeapp_web
 ```

@@ -5,6 +5,10 @@ services:
     build: 
       context: ./web
       dockerfile: Dockerfile
+    deploy:
+      replicas: 3
+      placement:
+        constraints: [node.role == worker]
     ports:
       - "8000:5000"
     networks:
