@@ -1,10 +1,6 @@
 services:
   web:
     build: .
-    deploy:
-      replicas: 3
-      placement:
-        constraints: [node.role == worker]
     ports:
       - "80:80"
     networks:
