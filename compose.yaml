@@ -1,7 +1,10 @@
 version: "3.1"
 services:
   web:
-    image: phptesteapp  
+    image: 127.0.0.1:5000/phptesteapp  
+    build: 
+      context: ./web
+      dockerfile: Dockerfile
     deploy:
       replicas: 3
       placement:
