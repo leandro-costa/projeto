@@ -1,4 +1,7 @@
 ```console
+git clone https://github.com/leandro-costa/projeto.git
+
+cd projeto
 
 docker swarm init --advertise-addr 192.168.0.XX
 
