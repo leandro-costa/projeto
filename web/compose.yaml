@@ -1,7 +1,6 @@
 services:
   web:
     build: .
-      context: ./web
     deploy:
       replicas: 3
       placement:
