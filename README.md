@@ -12,7 +12,7 @@ docker compose down
 
 docker compose push
 
-docker stack deploy --compose-file compose.yaml testeapp
+docker stack deploy --compose-file compose-deploy.yaml testeapp
 
 docker service ls
 
