@@ -1,0 +1,16 @@
+services:
+  web:
+    image: web-php
+    build:
+      context: ./web
+      dockerfile: Dockerfile    
+    deploy:
+      replicas: 3
+      placement:
+        constraints: [node.role == worker]
+    ports:
+      - "80:80"
+    networks:
+      - frontend
+networks:
+  frontend:

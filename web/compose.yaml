@@ -1,9 +1,0 @@
-services:
-  web:
-    build: .
-    ports:
-      - "80:80"
-    networks:
-      - frontend
-networks:
-  frontend:
