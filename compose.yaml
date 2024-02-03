@@ -10,7 +10,7 @@ services:
       placement:
         constraints: [node.role == worker]
     ports:
-      - "80:80"
+      - "8000:5000"
     networks:
       - frontend
 networks:
